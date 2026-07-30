@@ -1,7 +1,7 @@
 class Solution {
     public String interpret(String command) {
         int n = command.length();
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(n);
         
         for(int i=0; i<n; i++){
             char ch = command.charAt(i);
