@@ -14,11 +14,13 @@ class Solution {
             sb2.append(word2[i]);
         }
         
-        for(int i=0; i<n; i++){
-            if(sb1.toString().equals(sb2.toString())){
-                return true;
-            }
-        }
-        return false;
+        // for(int i=0; i<n; i++){
+        //     if(sb1.toString().equals(sb2.toString())){
+        //         return true;
+        //     }
+        // }
+        // return false;
+
+        return sb1.toString().equals(sb2.toString());
     }
 }
