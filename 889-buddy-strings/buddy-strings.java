@@ -4,6 +4,7 @@ class Solution {
         int mismatch = 0;
         int first = -1;
         int second = -1;
+        int[] freq = new int[26];
 
         if (s.length() != goal.length()) {
             return false;
@@ -22,10 +23,7 @@ class Solution {
         }
 
         if(mismatch == 0){
-            int[] freq = new int[26];
-
             for (int i = 0; i < n; i++) {
-
                 freq[s.charAt(i) - 'a']++;
 
                 if (freq[s.charAt(i) - 'a'] > 1) {
