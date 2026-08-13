@@ -2,6 +2,7 @@ class Solution {
     public String reverseWords(String s) {
         String str = new StringBuilder(s).reverse().toString();
         char [] arr = str.toCharArray();
+
         int n = arr.length;
         int i=0;
 
@@ -25,30 +26,28 @@ class Solution {
             }
         }
         
-StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
+        i = 0;
 
-i = 0;
+        while (i < n) {
+            while (i < n && arr[i] == ' ') {
+                i++;
+            }
 
-while (i < n) {
+            if (i >= n) {
+                break;
+            }
 
-    while (i < n && arr[i] == ' ') {
-        i++;
-    }
+            if (sb.length() > 0) {
+                sb.append(' ');
+            }
 
-    if (i >= n) {
-        break;
-    }
+            while (i < n && arr[i] != ' ') {
+                sb.append(arr[i]);
+                i++;
+            }
+        }
 
-    if (sb.length() > 0) {
-        sb.append(' ');
-    }
-
-    while (i < n && arr[i] != ' ') {
-        sb.append(arr[i]);
-        i++;
-    }
-}
-
-return sb.toString();
+    return sb.toString();
     }
 }
