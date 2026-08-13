@@ -25,7 +25,30 @@ class Solution {
             }
         }
         
-        String [] words = new String(arr).trim().split("\\s+");
-        return String.join(" ", words);
+StringBuilder sb = new StringBuilder();
+
+i = 0;
+
+while (i < n) {
+
+    while (i < n && arr[i] == ' ') {
+        i++;
+    }
+
+    if (i >= n) {
+        break;
+    }
+
+    if (sb.length() > 0) {
+        sb.append(' ');
+    }
+
+    while (i < n && arr[i] != ' ') {
+        sb.append(arr[i]);
+        i++;
+    }
+}
+
+return sb.toString();
     }
 }
